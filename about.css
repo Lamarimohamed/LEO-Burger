@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    position: fixed;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+nav .logo img{
+    width: 160px;
+    margin: 20px 0;
+    position: relative;
+    left: -45%;
+    cursor: pointer;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover{
+    color: #facc22;
+}
+
+nav ul li a.action{
+    color: #facc22;
+}
+
+nav .login a{
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #facc22;
+    border-radius: 20px;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+nav .login a:hover{
+    background: #facc22;
+    color: #fff;
+}
+
+
+
+
+/*Banner*/
+
+.banner_bg{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(image/banner_bg.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner_bg h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: relative;
+    top: 50%;
+    color: #fff;
+}
+
+.banner_bg h1 span{
+    color: #facc22;
+    margin-right: 15px;
+}
+
+
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0 0 0;
+    background-image: url(image/about_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .about_image img{
+    width: 750px;
+}
+
+.about .about_main .about_text h3{
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    line-height: 23px;
+    margin-top: 20px;
+}
+
+.about .about_main .about_text .about_services{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about .about_main .about_text .about_services .s_1{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    background: #ececec;
+    padding: 10px;
+    border: 2px solid #facc22;
+    cursor: pointer;
+}
+
+.about .about_main .about_text .about_services .s_1 i{
+    color: #000;
+    margin: 5px 10px 5px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_services .s_1:hover i{
+    color: #facc22;
+}
+
+.about .about_main .about_text .about_services .s_1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.about .about_main .about_text .about_btn{
+    position: relative;
+    top: 35px;
+    padding: 10px 20px;
+    border: 2px solid #facc22;
+    text-decoration: none;
+    color: #000;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn i{
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.about .about_main .about_text .about_btn:hover{
+    color: #fff;
+}
+
+.about .about_main .about_text .about_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #facc22;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #facc22;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+footer .end span{
+    color: #facc22;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #facc22;
+    border-radius: 30px;
+}
+
+.anim{
+    transform: translateY(40px);
+    animation: moveup 0.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
